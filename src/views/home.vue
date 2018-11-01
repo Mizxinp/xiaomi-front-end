@@ -194,8 +194,8 @@ export default {
         console.log(response)
         var res = response.data;
         if (res.status == "0") {
-          this.hotGoods = res.result.hotGoods;
-          this.starGoods = res.result.starGoods
+          this.hotGoods = res.result.splice(5);
+          this.starGoods = res.result.splice(0,7)
         }
       });
     },

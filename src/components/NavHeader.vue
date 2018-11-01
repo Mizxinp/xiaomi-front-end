@@ -51,9 +51,9 @@
             <li><a href="#">服务</a></li>
             <li><a href="#">社区</a></li>
           </ul>
-          <div id="searchBtnBox"></div>
+          <div id="searchBtnBox" @click="searchBooks"></div>
 
-          <input id="searchTextBox">
+          <input id="searchTextBox" v-model="keyWords">
             
           
         </div>
@@ -102,7 +102,8 @@ export default {
       errorTip: false,
       userName: "",
       userPwd: "",
-      nickname: ""
+      nickname: "",
+      keyWords:''
     };
   },
   computed: {},
@@ -112,9 +113,9 @@ export default {
   methods: {
     searchBooks() {
       this.$router.push({
-        path: "/booksList",
+        path: "/goodsList",
         query: {
-          keyWord: this.keyWord
+          keyWords: this.keyWords
         }
       });
     },

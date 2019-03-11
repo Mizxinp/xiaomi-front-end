@@ -1,20 +1,20 @@
 <template>
     <div>
-        <div id="footer">
+        <div class="footer">
 				<!--底部内容区域     -->
-				<div id="footer_content">
-					<div id="footer_service">
+				<div class="footer_content">
+					<div class="footer_service">
 						<ul>
 							<li><a href="#">预约维修服务</a></li>
 							<li><a href="#">7天无理由退货</a></li>
 							<li><a href="#">15天免费换货</a></li>
 							<li><a href="#">满150元包邮</a></li>
-							<li id="lastli"><a href="#">520余家售后网点</a></li>
+							<li class="lastli"><a href="#">520余家售后网点</a></li>
 						</ul>
 					</div>
 					<!--底部ul列表区 -->
-					<div id="footer_links">
-						<div id="footer_list">
+					<div class="footer_links">
+						<div class="footer_list">
 							<dl>
 								<dt>帮助中心</dt>
 								<dd><a href="#">账户管理</a></dd>
@@ -52,15 +52,15 @@
 								<dd><a href="#">防伪查询</a></dd>
 							</dl>
 						</div>
-						<div id="footer_tel">
-							<p id="phone">400-100-5678</p>
-							<p id="time1">周一至周日 8:00-18:00<br>
+						<div class="footer_tel">
+							<p class="phone">400-100-5678</p>
+							<p class="time1">周一至周日 8:00-18:00<br>
 									（仅收市话费）</p>
 						</div>
 					</div>
 				</div>
 				<!--底部连接区域     -->
-				<div id="footer_lianjie">
+				<div class="footer_lianjie">
 					
 				</div>
 			</div>
@@ -74,24 +74,24 @@
 </script>
 
 <style scoped>
-#footer{
+.footer{
 	width: 100%;
 	background: white;
 	margin: 0 auto;
 }
-#footer #footer_content{
+.footer .footer_content{
 	width:1226px;
 	height: 272px;
 	margin: 0 auto;
 
 }
-#footer #footer_content #footer_service{
+.footer .footer_content .footer_service{
 	width: 100%;
 	height: 50px;
 	margin-top: 30px;
 	border-bottom: 1px solid #E0E0E0 ;
 }
-#footer #footer_content #footer_service li{
+.footer .footer_content .footer_service li{
 	width: 240px;
 	height: 25px;
 	line-height: 25px;
@@ -100,20 +100,20 @@
 	float: left;
 	border-right: 1px solid #E0E0E0;
 }
-#footer #footer_content #footer_service  #lastli{
+.footer .footer_content .footer_service  .lastli{
 	border-right:none;
 }
-#footer #footer_content #footer_service li a{
+.footer .footer_content .footer_service li a{
 		color: #757575;
 }
-#footer #footer_content #footer_service li a:hover{
+.footer .footer_content .footer_service li a:hover{
 	color: #FFAC13;
 }
-#footer #footer_content #footer_links{
+.footer .footer_content .footer_links{
 	width: 1226px;
 	height: 192px;
 }
-#footer #footer_content #footer_links #footer_list{
+.footer .footer_content .footer_links .footer_list{
 	width: 966px;
 	height: 112px;
 	margin-top: 40px;
@@ -121,41 +121,41 @@
 	border-right: 1px solid #E0E0E0;
 }
 
-#footer #footer_content #footer_links #footer_list dl{
+.footer .footer_content .footer_links .footer_list dl{
 	width: 160px;
 	height: 112px;
 	float: left;
 	margin-top: 0px;
 }
-#footer #footer_content #footer_links #footer_list dd{
+.footer .footer_content .footer_links #footer_list dd{
 	margin-left: 0px;
 	font-size: 12px;
 	margin-top: 10px;
 }
-#footer_links #footer_list a{
+.footer_links .footer_list a{
 	color: #757575;
 }
-#footer_links #footer_list a:hover{
+.footer_links .footer_list a:hover{
 	color: #FF6700;
 }
-#footer #footer_content #footer_links #footer_list dt{
+.footer .footer_content .footer_links .footer_list dt{
 	color:#424242;
 	font-size: 14px;
 	margin-bottom: 10px;
 	
 }
-#footer #footer_content #footer_links #footer_tel{
+.footer .footer_content .footer_links .footer_tel{
 	width: 259px;
 	height: 112px;
 	margin-top: 40px;
 	float: right;
 	text-align: center;
 }
-#footer_links #footer_tel #phone{
+.footer_links .footer_tel .phone{
  	font-size: 22px;
  	color: #FF6700;
  }
-#footer_links #footer_tel #time1{
+.footer_links .footer_tel .time1{
 	font-size: 12px;
 	color: #757575;
 }

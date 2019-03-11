@@ -1,9 +1,9 @@
 <template>
   <div>
-    <header id="header">
+    <header class="header">
       <!--导航栏 -->
-      <div id="nav">
-        <div id="navCenter">
+      <div class="nav">
+        <div class="navCenter">
           <ul>
             <li><a href="#">小米商城</a></li>
             <li><a href="#">MIUI</a></li>
@@ -17,10 +17,10 @@
             <li><a href="#">问题反馈</a></li>
             <li class="lastLi"><a href="#">Select Region</a></li>
           </ul>
-          <div id="card">
+          <div class="card">
             <router-link href="javascript:;" :to="'/cart'">购物车（0）</router-link>
           </div>
-          <div id="loginResiger">
+          <div class="loginResiger">
             <span v-text="nickname" v-if="nickname"></span>
             <a href="javascript:;" @click="loginSignal=true" v-if="!nickname">登陆</a>
             <a href="javascript:;" @click="logout" v-else>退出</a> 
@@ -31,10 +31,10 @@
       </div>
 
       <!--菜单栏 -->
-      <div id="menu">
+      <div class="menu">
         <div class="h22"></div>
-        <div id="menuCenter">
-          <div id="logo">
+        <div class="menuCenter">
+          <div class="logo">
             <router-link :to="'/home'">
               <img src="../../static/logo.png">
             </router-link>
@@ -51,9 +51,9 @@
             <li><a href="#">服务</a></li>
             <li><a href="#">社区</a></li>
           </ul>
-          <div id="searchBtnBox" @click="searchBooks"></div>
+          <div class="searchBtnBox" @click="searchBooks"></div>
 
-          <input id="searchTextBox" v-model="keyWords">
+          <input class="searchTextBox" v-model="keyWords">
             
           
         </div>
@@ -161,50 +161,50 @@ export default {
 </script>
 
 <style scoped>
-#container{
+.container{
 	width:100%;
 }
 
-#header{
+.header{
 	width: 100%;
 	height: 140px;
 }
-#header #nav{
+.header .nav{
 	width: 100%;
 	height: 40px;
 	background-color: #333333;
 }
-#header #nav #navCenter{
+.header .nav .navCenter{
 	width: 1226px;
 	height: 40px;
 	margin: 0 auto;
 }
-#nav #navCenter ul {
+.nav .navCenter ul {
 	height: 12px;
 	margin-top: 12px;
 	float: left;
 }
-#nav #navCenter ul li{
+.nav .navCenter ul li{
 	float: left;
 	line-height: 12px;
 	border-right: 1px solid #606060;
 	font-size: 12px;  
 }
-#nav #navCenter .lastLi{
+.nav .navCenter .lastLi{
 	border-right:none;
 }
-#nav #navCenter ul li a{
+.nav .navCenter ul li a{
 	margin-left: 10px;
 	margin-right: 10px;
 	
 }
-#nav #navCenter a{
+.nav .navCenter a{
 	color: #b0b0b0;
 }
-#nav #navCenter a:hover{
+.nav .navCenter a:hover{
 	color: #e0e0e0;
 }
-#nav #navCenter #card{
+.nav .navCenter .card{
 	width:100px;
 	height: 40px;
 	background-color: #424242;
@@ -213,7 +213,7 @@ export default {
 	line-height: 40px;
 	text-align: center;
 }
-#nav #navCenter #loginResiger{
+.nav .navCenter .loginResiger{
 	width:140px;
 	height: 40px;
 	float: right;
@@ -221,60 +221,60 @@ export default {
 	line-height: 40px;
 	text-align: center;
 }
-#nav #navCenter #loginResiger a{
+.nav .navCenter .loginResiger a{
   margin-right: 5px;
 }
-#nav #navCenter #loginResiger span{
+.nav .navCenter .loginResiger span{
 	color: #b0b0b0;
 	margin-left: 5px;
 	margin-right: 5px;
 }
-#header #menu{
+.header .menu{
 	width: 100%;
 	height: 100px;
 }
-#header #menu #menuCenter{
+.header .menu .menuCenter{
 	width: 1226px;
 	height: 55px;
 	margin: 0 auto;
 }
-#header #menu #menuCenter #logo{
+.header .menu .menuCenter .logo{
 	width: 55px;
 	height: 55px;
 	background-color: #FF6700;
 	float: left;
 }
-#header #menu #menuCenter #logo img{
+.header .menu .menuCenter .logo img{
 	margin-left: 4px;
 	margin-top: 4px;
 }
-#header #menu #menuCenter ul{
+.header .menu .menuCenter ul{
 	height: 55px;
 	margin-left: 180px;
 	float: left;
 }
-#header #menu #menuCenter ul li{
+.header .menu .menuCenter ul li{
 	float: left;
 	line-height: 55px;
 }
 
-#header #menu #menuCenter ul li a{
+.header .menu .menuCenter ul li a{
 	font-size: 16px;
 	color: #333333;
 	margin-left: 10px;
 	margin-right: 10px;
 }
-#header #menu #menuCenter ul li a:hover{
+.header .menu .menuCenter ul li a:hover{
 	color: #FF6700;
 }
-#header #menu #menuCenter #searchBtnBox{
+.header .menu .menuCenter .searchBtnBox{
 	width: 55px;
 	height: 53px;
 	float: right;
   border: 1px solid #e0e0e0;
 	background-image: url(../../static/search1.jpg);
 }
-#header #menu #menuCenter #searchTextBox{
+.header .menu .menuCenter .searchTextBox{
 	width: 240px;
 	height: 48px;
 	float: right;
@@ -283,7 +283,7 @@ export default {
   padding-left: 5px;
   outline: none;
 }
-#header #menu #menuCenter #searchTextBox #searchText{
+.header .menu .menuCenter .searchTextBox .searchText{
 	width: 220px;
 	height: 20px;
 	outline: none;
@@ -291,7 +291,7 @@ export default {
 	margin-left: 10px;
 	border: none;
 }
-#header #menu #menuCenter #searchTextBox a{
+.header .menu .menuCenter .searchTextBox a{
 	display: inline-block;
 	margin-left: 20px;
 	margin-top: 20px;
@@ -299,7 +299,7 @@ export default {
 	background: #eee;
 	color: #757575;
 }
-#header #menu #menuCenter #searchTextBox a:hover{
+.header .menu .menuCenter .searchTextBox a:hover{
 	background: #FF6700;
 	color: #fff;
 }

@@ -104,16 +104,33 @@ export default {
       });
     },
     addCart(productId) {
-      axios.post("goods/addCart", { productId: productId }).then(response => {
+      axios.get("users/checkLogin").then(response => {
+        var res = response.data;
+        if (res.status == "0") {
+          axios.post("goods/addCart", { productId: productId }).then(response => {
+            let res = response.data;
+            if (res.status == "0") {
+              // alert('成功');
+              this.mkShowCart = true;
+            } else {
+              alert('失败')
+              // this.mkShow = true;
+            }
+          });
+        }else{
+          this.mkShow = true;
+        }
+      });
+      /* axios.post("goods/addCart", { productId: productId }).then(response => {
         let res = response.data;
         if (res.status == "0") {
           // alert('成功');
           this.mkShowCart = true;
         } else {
-          alert('失败')
-          // this.mkShow = true;
+          // alert('失败')
+          this.mkShow = true;
         }
-      });
+      }); */
     },
     closeMask() {
       this.mkShow = false;

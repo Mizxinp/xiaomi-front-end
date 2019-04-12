@@ -1,13 +1,13 @@
 <template>
   <div>
     <!-- 头部部分 -->
-    <div id="container">
+    <div class="container">
       <nav-header></nav-header>
       <!--网页主体内容区域  -->
-      <div id="content">
+      <div class="content">
         <!--网页主体内容区域  Banner -->
-        <div id="banner">
-          <div id="bannerLeftBox">
+        <div class="banner">
+          <div class="bannerLeftBox">
             <ul>
               <li>手机 平板 电话卡<span>&gt;</span></li>
               <li>电视 盒子<span>&gt;</span></li>
@@ -24,8 +24,8 @@
         </div>
         <div class="h15"></div>
         <!--网页主体内容区域  product -->
-        <div id="product">
-          <div id="productService">
+        <div class="product">
+          <div class="productService">
             <div class="productServiceBox">
               <img src="/static/service1.jpg" />
               <span><a href="#">开放购买</a></span>
@@ -71,8 +71,8 @@
         </div>
         <div class="h15"></div>
         <!--网页主体内容区域  star -->
-        <div id="star">
-          <div id="starTop">
+        <div class="star">
+          <div class="starTop">
             <h2>小米明星单品</h2>
             <div class="starlr">
               <a href="#"><img src="/static/arrowRight.jpg" /></a>
@@ -81,8 +81,8 @@
               <a href="#"><img src="/static/arrowLeft.jpg" /></a>
             </div>
           </div>
-          <div id="starShow">
-            <div id="starOne" v-for="(item,index) in starGoods" :key="index"  @click="toProductDetail(item.productId)">
+          <div class="starShow">
+            <div class="starOne" v-for="(item,index) in starGoods" :key="index"  @click="toProductDetail(item.productId)">
               <a href="javascript:;"><img :src="'static/' + item.productImage" /></a>
               <h3 class="title">{{item.productName}}</h3>
               <p class="desc">{{item.productDesc}}</p>
@@ -92,16 +92,16 @@
         </div>
       </div>
       <!--具体分区  -->
-      <div id="main">
+      <div class="main">
         <div class="h22"></div>
-        <div id="mainText">
+        <div class="mainText">
 
           <!--家电区 -->
-          <div id="jiaDianTitle">
+          <div class="jiaDianTitle">
 
             <h2>家电</h2>
 
-            <div id="titleRight">
+            <div class="titleRight">
               <ul>
                 <li><a href="#" style="text-decoration: underline;color:#FF6700">热门</a></li>
                 <li><a href="#">电视影音</a></li>
@@ -110,8 +110,8 @@
               </ul>
             </div>
           </div>
-          <div id="jiaDian">
-            <div id="leftBox">
+          <div class="jiaDian">
+            <div class="leftBox">
               <img src="/static/jinghuaqi.jpg" />
             </div>
             <div>
@@ -167,7 +167,7 @@
 					-->
 
         </div>
-        <div id="space60"></div>
+        <div class="space60"></div>
       </div>
       <!--网页底部  -->
       <nav-footer></nav-footer>
@@ -192,7 +192,7 @@ export default {
     init() {
       axios.get("goods/goodsList").then(response => {
         console.log(response)
-        var res = response.data;
+        let res = response.data;
         if (res.status == "0") {
           this.hotGoods = res.result.splice(5);
           this.starGoods = res.result.splice(0,7)
@@ -213,28 +213,28 @@ export default {
 
 <style scoped>
 /***网页主题内容区域**/
-#content {
+.content {
   width: 1226px;
   margin: 0px auto;
 }
-#content #banner {
+.content .banner {
   width: 1226px;
   height: 460px;
   background-image: url(../../static/banner1.jpg);
 }
-#content #banner #bannerLeftBox {
+.content .banner .bannerLeftBox {
   width: 234px;
   height: 460px;
   background-color: rgba(0, 0, 0, 0.5);
   /*opacity: 0.5;!important;*/
 }
-#content #banner #bannerLeftBox ul {
+.content .banner .bannerLeftBox ul {
   width: 234px;
   height: 420px;
   margin-top: 20px;
   float: left;
 }
-#content #banner #bannerLeftBox ul li {
+.content .banner .bannerLeftBox ul li {
   width: 200px;
   height: 40px;
   padding-left: 20px;
@@ -242,185 +242,185 @@ export default {
   font-size: 14px;
   color: #ccc;
 }
-#content #banner #bannerLeftBox ul li span {
+.content .banner .bannerLeftBox ul li span {
   float: right;
   margin-right: 35px;
 }
 
-#content #product {
+.content .product {
   width: 100%;
   height: 170px;
 }
-#content #product #productService {
+.content .product .productService {
   width: 233px;
   height: 170px;
   float: left;
 }
-#content #product .productShow {
+.content .product .productShow {
   width: 316px;
   height: 170px;
   float: left;
   margin-left: 14px;
 }
-#product #productService .productServiceBox {
+.product .productService .productServiceBox {
   width: 77px;
   height: 84px;
   background-color: #5f5750;
   float: left;
 }
-#product #productService .spaceX {
+.product .productService .spaceX {
   width: 233px;
   height: 1px;
   background-color: #665e57;
   float: left;
 }
-#product #productService .spaceY {
+.product .productService .spaceY {
   width: 1px;
   height: 84px;
   background-color: #665e57;
   float: left;
 }
-#product #productService .productServiceBox img {
+.product .productService .productServiceBox img {
   margin-top: 20px;
   margin-left: 26px;
 }
-#product #productService .productServiceBox span {
+.product .productService .productServiceBox span {
   display: block;
   margin-top: 8px;
   margin-left: 15px;
 }
-#product #productService .productServiceBox a {
+.product .productService .productServiceBox a {
   color: #b0b0b0;
   font-size: 12px;
 }
-#product #productService .productServiceBox a:hover {
+.product .productService .productServiceBox a:hover {
   color: #e0e0e0;
 }
-#content #star {
+.content .star {
   width: 1226px;
   height: 400px;
   margin: 0px auto;
 }
-#content #star #starTop {
+.content .star .starTop {
   width: 1226px;
   height: 58px;
 }
-#content #star #starTop h2 {
+.content .star .starTop h2 {
   margin-top: 20px;
   font-weight: 400;
   float: left;
 }
 
-#content #star #starTop .starlr {
+.content .star .starTop .starlr {
   width: 35px;
   height: 20px;
   float: right;
   margin-top: 20px;
   border: 1px solid #e0e0e0;
 }
-#content #star #starTop .starlr img {
+.content .star .starTop .starlr img {
   margin-top: 2px;
   margin-left: 10px;
 }
-#content #star #starShow {
+.content .star .starShow {
   width: 1226px;
   height: 342px;
 }
-#content #star #starShow div {
+.content .star .starShow div {
   width: 235px;
   height: 341px;
   margin-right: 10px;
   float: left;
 }
-#content #star #starShow #starOne {
+.content .star .starShow .starOne {
   border-top: 1px solid #ffac13;
 }
-#content #star #starShow #starTWo {
+.content .star .starShow .starTWo {
   border-top: 1px solid #83c44e;
 }
-#content #star #starShow #starThree {
+.content .star .starShow .starThree {
   border-top: 1px solid #2196f3;
 }
-#content #star #starShow #starFour {
+.content .star .starShow .starFour {
   border-top: 1px solid #e53935;
 }
-#content #star #starShow #starFive {
+.content .star .starShow .starFive {
   border-top: 1px solid #00c0a5;
 }
-#content #star #starShow img {
+.content .star .starShow img {
   width: 160px;
   height: 160px;
   margin-top: 50px;
   margin-left: 40px;
 }
-#content #star #starShow h3 {
+.content .star .starShow h3 {
   font-size: 14px;
   color: black;
   text-align: center;
   font-weight: 300;
   cursor: pointer; /*鼠标变成手型*/
 }
-#content #star #starShow .desc {
+.content .star .starShow .desc {
   color: #b0b0b0;
   margin-top: 5px;
   font-size: 14px;
   text-align: center;
 }
-#content #star #starShow .price {
+.content .star .starShow .price {
   color: #ff6700;
   margin-top: 10px;
   font-size: 14px;
   text-align: center;
 }
 
-#main {
+.main {
   width: 100%;
   background: #f5f5f3;
 }
-#main #mainText {
+.main .mainText {
   width: 1226px;
   margin: 0px auto;
   margin-top: 30px;
 }
-#main #mainText #jiaDianTitle {
+.main .mainText .jiaDianTitle {
   width: 100%;
   height: 58px;
 }
-#main #mainText #jiaDianTitle h2 {
+.main .mainText .jiaDianTitle h2 {
   float: left;
   margin-top: 10px;
   margin-left: 5px;
 }
-#main #mainText #jiaDianTitle #titleRight {
+.main .mainText .jiaDianTitle .titleRight {
   width: 280px;
   height: 42px;
   float: right;
   margin-top: 20px;
 }
-#main #mainText #jiaDianTitle #titleRight ul li {
+.main .mainText .jiaDianTitle .titleRight ul li {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   font-size: 18px;
 }
-#main #mainText #jiaDianTitle #titleRight a {
+.main .mainText .jiaDianTitle .titleRight a {
   color: #424242;
 }
-#main #mainText #jiaDianTitle #titleRight a:hover {
+.main .mainText .jiaDianTitle .titleRight a:hover {
   color: #ff6700;
   text-decoration: underline;
 }
-#main #mainText #jiaDian {
+.main .mainText .jiaDian {
   width: 100%;
   height: 620px;
   margin-top: 5px;
 }
-#main #mainText #jiaDian #leftBox {
+.main .mainText .jiaDian .leftBox {
   width: 234px;
   height: 620px;
   float: left;
 }
-#main #mainText #jiaDian .jiaDianBox {
+.main .mainText .jiaDian .jiaDianBox {
   box-shadow: 0 2px 10px 1px var(--primary-shadow);
   width: 234px;
   height: 300px;
@@ -431,7 +431,7 @@ export default {
   position: relative;
   cursor:pointer;
 }
-#main #mainText #jiaDian .jiaDianBox .orange {
+.main .mainText .jiaDian .jiaDianBox .orange {
   width: 234px;
   height: 0px;
   background-color: #ff6700;
@@ -443,35 +443,35 @@ export default {
   font-size: 12px;
   transition: all 2s linear;
 }
-#main #mainText #jiaDian .jiaDianBox:hover .orange {
+.main .mainText .jiaDian .jiaDianBox:hover .orange {
   display: block;
 }
-#main #mainText #jiaDian .jiaDianBox img {
+.main .mainText .jiaDian .jiaDianBox img {
   width: 160px;
   height: 160px;
   margin-top: 50px;
   margin-left: 40px;
 }
-#main #mainText #jiaDian .jiaDianBox h3 {
+.main .mainText .jiaDian .jiaDianBox h3 {
   font-size: 14px;
   color: black;
   text-align: center;
   font-weight: 300;
   cursor: pointer; /*鼠标变成手型*/
 }
-#main #mainText #jiaDian .jiaDianBox .desc {
+.main .mainText .jiaDian .jiaDianBox .desc {
   color: #b0b0b0;
   margin-top: 5px;
   font-size: 14px;
   text-align: center;
 }
-#main #mainText #jiaDian .jiaDianBox .price {
+.main .mainText .jiaDian .jiaDianBox .price {
   color: #ff6700;
   margin-top: 10px;
   font-size: 14px;
   text-align: center;
 }
-#main #mainText #jiaDian .jiaDianBox .salesRed {
+.main .mainText .jiaDian .jiaDianBox .salesRed {
   width: 70px;
   height: 20px;
   background-color: red;
@@ -482,7 +482,7 @@ export default {
   font-size: 12px;
   line-height: 20px;
 }
-#main #mainText #jiaDian .jiaDianBox .salesGreen {
+.main .mainText .jiaDian .jiaDianBox .salesGreen {
   width: 70px;
   height: 20px;
   background-color: #83c44e;
@@ -493,34 +493,34 @@ export default {
   font-size: 12px;
   line-height: 20px;
 }
-#main #mainText #jiaDian .jiaDianBox .eight {
+.main .mainText .jiaDian .jiaDianBox .eight {
   width: 234px;
   height: 145px;
   margin-top: 10px;
 }
-#main #mainText #jiaDian .jiaDianBox .eight .eightRight {
+.main .mainText .jiaDian .jiaDianBox .eight .eightRight {
   width: 117px;
   height: 145px;
   float: right;
 }
-#main #mainText #jiaDian .jiaDianBox .eight .eightRight img {
+.main .mainText .jiaDian .jiaDianBox .eight .eightRight img {
   width: 80px;
   height: 80px;
   margin-top: 30px;
   margin-left: 10px;
 }
-#main #mainText #jiaDian .jiaDianBox .eight .eightLeft {
+.main .mainText .jiaDian .jiaDianBox .eight .eightLeft {
   width: 117px;
   height: 145px;
   float: left;
 }
-#main #mainText #jiaDian .jiaDianBox .eightSpaceX {
+.main .mainText .jiaDian .jiaDianBox .eightSpaceX {
   width: 234px;
   height: 10px;
   clear: both;
   background-color: #f5f5f3;
 }
-#main #space60 {
+.main .space60 {
   width: 100%;
   height: 60px;
   background-color: #f5f5f3;

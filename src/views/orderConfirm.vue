@@ -20,7 +20,6 @@
         <div class="container">
             <div class="container-wrap">
                 <div class="step-title">
-                    <h2>豆瓣</h2>
                 </div>
                 <div class="check-step">
                     <ul>
@@ -60,9 +59,9 @@
                             </li>
                             <li class="number-wrap">
                                 <div class="number">
-                                    <a href="">-</a>
+                                    <a href="#">-</a>
                                     <span>{{item.productNum}}</span>
-                                    <a href="">+</a>
+                                    <a href="#">+</a>
                                 </div>
                             </li>
                             <li class="totle-price-wrap row">

@@ -94,9 +94,9 @@ export default {
   },
   methods: {
     init() {
-      var productId = this.$route.query.productId;
+      let productId = this.$route.query.productId;
       axios.get("goods/goodsDetail?productId=" + productId).then(response => {
-        var res = response.data;
+        let res = response.data;
 
         if (res.status == "0") {
           this.goodsDetail = res.result;
@@ -105,7 +105,7 @@ export default {
     },
     addCart(productId) {
       axios.get("users/checkLogin").then(response => {
-        var res = response.data;
+        let res = response.data;
         if (res.status == "0") {
           axios.post("goods/addCart", { productId: productId }).then(response => {
             let res = response.data;
